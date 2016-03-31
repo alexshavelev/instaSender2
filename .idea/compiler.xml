@@ -25,6 +25,8 @@
         <module name="WelcomeProj" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="WelcomeProj" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
