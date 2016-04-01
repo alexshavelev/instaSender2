@@ -59,14 +59,15 @@ public class HttpUrlConnection{
                 new InputStreamReader(con.getInputStream()));
 
 
-        
 
-        Map<String, List<String>> map = con.getHeaderFields();
 
-        for (Map.Entry<String, List<String>> entry : map.entrySet())
-        {
-            System.out.println("Key : " + entry.getKey() + " ,Value : " + entry.getValue());
+        StringBuilder sb = new StringBuilder();
+        String line;
+        while ((line = in.readLine()) != null) {
+            sb.append(line+"\n");
         }
+
+
 
 
 //        String inputLine;
@@ -78,7 +79,7 @@ public class HttpUrlConnection{
 
         in.close();
 
-        return response.toString();
+        return sb.toString();
 
         //print result
 //        System.out.println(response.toString());
