@@ -7,17 +7,12 @@ import com.pengrad.telegrambot.*;
 import com.shavelev.alexander.helpers.AuthMsg;
 //import com.google.gson.*;
 import net.sf.json.*;
-import org.telegram.telegrambots.TelegramBotsApi;
+
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-
-
-
-
 
 
 /**
@@ -60,13 +55,9 @@ public class UpdateWorker {
             if (!linksList.contains(link)) {
                 System.out.println("link="+link);
 
-                bot.sendMessage(
-                                alexShavelev,
-                                link,
-                                false,
-                                1,
-                        new ReplyKeyboardMarkup(new String[]{"ok", "cancel"}));
-                bot.sendMessage(bastards, link, false, 1, new ReplyKeyboardMarkup(new String[]{"ok", "cancel"}));
+                bot.sendMessage(alexShavelev, link, null, null, null);
+                bot.sendMessage(bastards, link, null, null, null);
+
                 // send to telegram
                 linksList.add(link);
             } else {
