@@ -7,7 +7,7 @@ public class UpdateWorker {
 
     private final String MAIN_URL = "https://api.instagram.com/";
     private final String SELF_FEED = "v1/users/self/feed";
-    private final String ACCESS_TOKEN = "30782247.1fb234f.85987a7aa25842a69bb4165a38e4f2ac";
+    private final String ACCESS_TOKEN = "";
     private String httpResult;
 
     public void update() throws Exception {
